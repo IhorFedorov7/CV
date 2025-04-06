@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
         
         for (let item of data) {
             
-            $gallery.insertAdjacentHTML("beforeend", `<card-component class="frame ${item.globalClass}">
+            $gallery.insertAdjacentHTML("beforeend", `<card-component class="frame ${!item.globalClass ? "" : item.globalClass}">
                 ${jsonToHtml(item)}
             </card-component>`);
         };
