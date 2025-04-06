@@ -4,7 +4,7 @@ import "./webComponents/Card.js";
 
 
 window.addEventListener("DOMContentLoaded", () => {
-    fetch('../card__info.json')
+    fetch('./api/card__info.json')
     .then(response => {
         if (!response.ok) throw new Error('Ошибка загрузки JSON');
 
