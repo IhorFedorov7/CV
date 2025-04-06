@@ -1,0 +1,411 @@
+[
+    {
+        "tag": "h2",
+        "children": ["I'm Ihor"]
+    },
+    {
+        "tag": "div",
+        "attrs": { 
+            "class": "frame-media frame-media__left",
+            "style": "background-image: url(./media/ihorFedorovCV.webp);"
+        },
+        "children": [
+            {
+                "tag": "div",
+                "attrs": { 
+                    "class": "frame-blur__bg"
+                }
+            }
+        ]
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "video",
+        "attrs": { 
+            "class": "frame-media frame-media__right",
+            "src": "./media/wrateCode.webm",
+            "autoplay": true,
+            "loop": true,
+            "muted": true
+        }
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "div",
+        "attrs": { 
+            "class": "text-left"
+        },
+        "children": [
+            {
+                "tag": "h3",
+                "children": ["I write on JavaScript"]
+            },
+            {
+                "tag": "p",
+                "children": ["I'm from Ukraine but live in Bratislava"]
+            }
+        ]
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "h3",
+        "children": ["01.2018&nbsp;to&nbsp;the&nbsp;present&nbsp;day"]
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "div",
+        "attrs": { 
+            "class": "frame__content"
+        }
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "div",
+        "attrs": { 
+            "class": "text-right"
+        },
+        "children": [
+            {
+                "tag": "h3",
+                "children": ["Freelance:&nbsp;Javascript"]
+            },
+            {
+                "tag": "p",
+                "children": ["Frontend Developer."]
+            }
+        ]
+    },
+    {
+        "tag": "div"
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "div",
+        "attrs": { 
+            "class": "text-left"
+        },
+        "children": [
+            {
+                "tag": "h3",
+                "children": ["Skills"]
+            },
+            {
+                "tag": "ul",
+                "children": [
+                    {
+                        "tag": "li",
+                        "children": ["HTML"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["CSS"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["SCSS"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["JavaScript"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["React"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["jquery"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["AppsScript"]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "h3",
+        "children": ["12.2019&nbsp;to&nbsp;01.2023"]
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "div",
+        "attrs": { 
+            "class": "frame-media frame-media__right",
+            "style": "background-image: url(./media/logo/hankuper.svg);"
+        }
+    },
+    {
+        "tag": "div"
+    },  
+    {
+        "globalClass": " frame__bg",
+        "tag": "div",
+        "attrs": { 
+            "class": "text-left"
+        },
+        "children": [
+            {
+                "tag": "h3",
+                "children": ["Hankuper&nbsp;s.r.o"]
+            },
+            {
+                "tag": "p",
+                "children": ["Product AdLock"]
+            },
+            {
+                "tag": "p",
+                "children": ["My main task was to research the advertising market.",
+                        "Development of algorithms for blocking ads.",
+                        "Development of an internal \"Ticket system\" for customer support.",
+                        "Automation of the process of assembling resources for blocking ads and their autotesting."
+                    ]
+            }
+        ]
+    },
+    {
+        "tag": "div"
+    },
+    {
+        "tag": "div",
+        "attrs": { 
+            "class": "text-right"
+        },
+        "children": [
+            {
+                "tag": "h3",
+                "children": ["Ticket&nbsp;system"]
+            },
+            {
+                "tag": "video",
+                "attrs": { 
+                    "class": "frame-media frame-media__right",
+                    "src": "./media/ticket.webm",
+                    "autoplay": true,
+                    "loop": true,
+                    "muted": true
+                }
+            }
+        ]
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "div"
+    },
+    {
+        "tag": "div",
+        "attrs": { 
+            "class": "text-left"
+        },
+        "children": [
+            {
+                "tag": "h3",
+                "children": ["Skills"]
+            },
+            {
+                "tag": "ul",
+                "children": [
+                    {
+                        "tag": "li",
+                        "children": ["HTML"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["CSS"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["SCSS"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["SASS"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["JavaScript"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["React"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["Styled components"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["Node.js"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["jquery"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["Auto-test"]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "div"
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "h3",
+        "children": ["11.2022&nbsp;to&nbsp;the&nbsp;present&nbsp;day"]
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "div",
+        "attrs": { 
+            "class": "frame-media frame-media__right",
+            "style": "background-image: url(./media/logo/logoEunify.png); background-size: auto;"
+        }
+    },
+    {
+        "tag": "div"
+    },  
+    {
+        "tag": "div",
+        "attrs": { 
+            "class": "text-left"
+        },
+        "children": [
+            {
+                "tag": "h3",
+                "children": ["eUnifyCentral&nbsp;LLC"]
+            },
+            {
+                "tag": "p",
+                "children": ["Product: uManage, eUnifyPay, CommunityLink, PropDocs"]
+            },
+            {
+                "tag": "p",
+                "children": ["My job Front-End Developer."]
+            }
+        ]
+    },
+    {
+        "globalClass": " frame__bg",
+        "tag": "div"
+    },
+    {
+        "tag": "div",
+        "attrs": { 
+            "class": "text-right"
+        },
+        "children": [
+            {
+                "tag": "h3",
+                "children": ["Skills"]
+            },
+            {
+                "tag": "ul",
+                "children": [
+                    {
+                        "tag": "li",
+                        "children": ["HTML"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["CSS"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["JavaScript"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["C#"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["ASP.NET"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["MAUI"]
+                    },
+                    {
+                        "tag": "li",
+                        "children": ["jquery"]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "tag": "div"
+    },
+    {
+        "tag": "div",
+        "children": [
+            {
+                "tag": "p",
+                "children": [
+                    "E-mail: ",
+                    {
+                        "tag": "a",
+                        "attrs": { 
+                            "class": "link",
+                            "target": "_blank",
+                            "href": "mailto:ihor.fedorov.life@gmail.com"
+                        },
+                        "children": ["ihor.fedorov.life@gmail.com"]
+                    }
+                ]
+            },
+            {
+                "tag": "p",
+                "children": [
+                    "Linkedin: ",
+                    {
+                        "tag": "a",
+                        "attrs": { 
+                            "class": "link",
+                            "target": "_blank",
+                            "href": "https://www.linkedin.com/in/ihor-f-48b820313"
+                        },
+                        "children": ["Ihor Fedorov"]
+                    }
+                ]
+            },
+            {
+                "tag": "p",
+                "children": [
+                    "Github: ",
+                    {
+                        "tag": "a",
+                        "attrs": { 
+                            "class": "link",
+                            "target": "_blank",
+                            "href": "https://github.com/IhorFedorov7"
+                        },
+                        "children": ["IhorFedorov7"]
+                    }
+                ]
+            },
+            {
+                "tag": "p",
+                "children": [
+                    "Telegram: ",
+                    {
+                        "tag": "a",
+                        "attrs": { 
+                            "class": "link",
+                            "target": "_blank",
+                            "href": "https://t.me/goodSoftDev"
+                        },
+                        "children": ["@goodSoftDev"]
+                    }
+                ]
+            }
+        ]
+    }
+]
