@@ -9,7 +9,7 @@
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 6100px;
+    --depth: 11700px;
     --transition: .75s cubic-bezier(.075, .5, 0, 1);
 }
 
@@ -29,23 +29,10 @@ h1, h2, h3, h4, h5, h6 {
     width: min-content;
 }
 
-/*Start test*/
-.red {
-    background-color: red;
+card-component {
+    will-change: transform, opacity;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
-
-.blue {
-    background-color: blue;
-}
-
-.green {
-    background-color: green;
-}
-
-.yellow {
-    background-color: yellow;
-}
-/*End test*/
 
 .container {
     width: 100%;

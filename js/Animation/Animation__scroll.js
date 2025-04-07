@@ -1,41 +1,40 @@
 export class SmoothScroll {
     constructor(options = {}) {
         const {
-          zSpacing = -1000,
-          frames,
-          ticking = false,
+            zSpacing = -1000,
+            frames
         } = options;
-    
+
         this.zSpacing = zSpacing;
-        this.lastPos = zSpacing / 5;
         this.frames = frames || Array.from(document.getElementsByTagName('card-component'));
-        this.zVals = this.frames.map((_, i) => i * this.zSpacing + this.zSpacing);
-        this.ticking = ticking;
-  
-        this.smoothScroll = this.smoothScroll.bind(this);
-  
+
+        this.zTargets = this.frames.map((_, i) => i * this.zSpacing + this.zSpacing);
+        this.zCurrent = [...this.zTargets];
+
+        this.lastScroll = window.scrollY;
+
+        this.animate = this.animate.bind(this);
+
         window.addEventListener('scroll', () => {
-            if (!this.ticking) {
-
-                window.requestAnimationFrame(this.smoothScroll);
-                this.ticking = true;
-            }
-        });
-
-        this.smoothScroll();
-    }
-  
-    smoothScroll() {
-        const top = document.documentElement.scrollTop || document.body.scrollTop;
-        const delta = this.lastPos - top;
-        this.lastPos = top;
-    
-        this.frames.forEach((frame, i) => {
-            this.zVals[i] += delta * -5;
             
-            const transform = `translateZ(${this.zVals[i]}px)`;
-            const opacity = this.zVals[i] < Math.abs(this.zSpacing) / 1.8 ? 1 : 0;
-    
+            this.lastScroll = window.scrollY;
+        }, { passive: true });
+
+        requestAnimationFrame(this.animate);
+    }
+
+    animate() {
+        const scrollTop = this.lastScroll;
+
+        this.frames.forEach((frame, i) => {
+            const targetZ = i * this.zSpacing + scrollTop * 2.5 + this.zSpacing;
+            this.zTargets[i] = targetZ;
+
+            this.zCurrent[i] += (this.zTargets[i] - this.zCurrent[i]) * 0.1;
+
+            const transform = `translateZ(${this.zCurrent[i]}px)`;
+            const opacity = this.zCurrent[i] < Math.abs(this.zSpacing) / 1.8 ? 1 : 0;
+
             if (typeof frame.setStyle === 'function') {
                 frame.setStyle({
                     transform,
@@ -43,7 +42,7 @@ export class SmoothScroll {
                 });
             }
         });
-    
-        this.ticking = false;
+
+        requestAnimationFrame(this.animate);
     }
 }
