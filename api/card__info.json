@@ -169,28 +169,6 @@
         "tag": "div"
     },
     {
-        "tag": "div",
-        "attrs": { 
-            "class": "text-right"
-        },
-        "children": [
-            {
-                "tag": "h3",
-                "children": ["Ticket&nbsp;system"]
-            },
-            {
-                "tag": "video",
-                "attrs": { 
-                    "class": "frame-media frame-media__right",
-                    "src": "./media/ticket.webm",
-                    "autoplay": true,
-                    "loop": true,
-                    "muted": true
-                }
-            }
-        ]
-    },
-    {
         "globalClass": " frame__bg",
         "tag": "div"
     },
