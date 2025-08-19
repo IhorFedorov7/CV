@@ -342,21 +342,6 @@
             {
                 "tag": "p",
                 "children": [
-                    "Linkedin: ",
-                    {
-                        "tag": "a",
-                        "attrs": { 
-                            "class": "link",
-                            "target": "_blank",
-                            "href": "https://www.linkedin.com/in/ihor-f-48b820313"
-                        },
-                        "children": ["Ihor Fedorov"]
-                    }
-                ]
-            },
-            {
-                "tag": "p",
-                "children": [
                     "Github: ",
                     {
                         "tag": "a",
