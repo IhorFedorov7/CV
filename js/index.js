@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
         };
         
         requestAnimationFrame(() => {
-            new SmoothScroll();
+            new SmoothScroll({ ease: 0.12, speed: 2.6, zSpacing: -1000 });
 
             window.scrollTo(0, 1);
         });

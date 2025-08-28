@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 card-component {
     will-change: transform, opacity;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
 }
 
 .container {
@@ -53,7 +53,7 @@ card-component {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--transition), opacity .75s ease;
+    transition: opacity .75s ease;
     will-change: transform;
     transform-style: preserve-3d;
 }

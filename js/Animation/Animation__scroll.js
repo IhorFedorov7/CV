@@ -2,42 +2,51 @@ export class SmoothScroll {
     constructor(options = {}) {
         const {
             zSpacing = -1000,
-            frames
+            frames,
+            ease = 0.12,
+            speed = 2.5
         } = options;
 
         this.zSpacing = zSpacing;
         this.frames = frames || Array.from(document.getElementsByTagName('card-component'));
+        this.defaultEase = ease;
+        this.ease = ease;
+        this.speed = speed;
 
-        this.zTargets = this.frames.map((_, i) => i * this.zSpacing + this.zSpacing);
-        this.zCurrent = [...this.zTargets];
+        
+        const mql = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const applyPRM = (matches) => {
+            this.ease = matches ? 1 : this.defaultEase;
+        }
 
-        this.lastScroll = window.scrollY;
+        applyPRM(mql.matches);
+        mql.addEventListener?.('change', (e) => applyPRM(e.matches));
+
+        this.targetScroll = window.scrollY;
+        this.smoothedScroll = this.targetScroll;
 
         this.animate = this.animate.bind(this);
 
         window.addEventListener('scroll', () => {
             
-            this.lastScroll = window.scrollY;
+            this.targetScroll = window.scrollY;
         }, { passive: true });
 
-        requestAnimationFrame(this.animate);
+        this.animate();
     }
 
     animate() {
-        const scrollTop = this.lastScroll;
+        this.smoothedScroll += (this.targetScroll - this.smoothedScroll) * this.ease;
+        
+        const scrollTop = this.smoothedScroll;
 
         this.frames.forEach((frame, i) => {
-            const targetZ = i * this.zSpacing + scrollTop * 2.5 + this.zSpacing;
-            this.zTargets[i] = targetZ;
-
-            this.zCurrent[i] += (this.zTargets[i] - this.zCurrent[i]) * 0.1;
-
-            const transform = `translateZ(${this.zCurrent[i]}px)`;
-            const opacity = this.zCurrent[i] < Math.abs(this.zSpacing) / 1.8 ? 1 : 0;
+            const z = i * this.zSpacing + scrollTop * this.speed + this.zSpacing;
+            const opacity = z < Math.abs(this.zSpacing) / 1.8 ? 1 : 0;
 
             if (typeof frame.setStyle === 'function') {
                 frame.setStyle({
-                    transform,
+                    transform: `translateZ(${z}px)`,
                     opacity: i !== this.frames.length - 1 ? opacity : 1,
                 });
             }
